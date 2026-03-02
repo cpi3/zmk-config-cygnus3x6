@@ -18,8 +18,8 @@
 
     default_transform: keymap_transform_0 {
         compatible = "zmk,matrix-transform"; 
-        columns = <16>;
-        rows = <5>;
+        columns = <12>;  // actual number of key columns in each main row
+        rows = <5>;  // four main rows plus one thumb row
 // Matrix layout order: four rows of 12 physical switches, with a
 // centred thumb row of six switches (columns 3 through 8).  This
 // transform places the thumb keys separately so tooling can render a

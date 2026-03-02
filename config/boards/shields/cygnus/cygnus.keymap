@@ -15,12 +15,14 @@
 
         default_layer {
             display-name = "Default Layer";
-            // Cygnus 4x6 physical layout (logical order shown below)
-            // row1: ESC 1 2 3 4 5      |      6 7 8 9 0 `
-            // row2: TAB Q W E R T      |      Y U I O P -
-            // row3: CTRL A S D F G     |      H J K L ; '
-            // row4: SHFT Z X C V B    LT1 LT2 LT3  |  N M , . / SHFT
-            // thumb row bindings (left-to-right): LOWER (&mo 1), SPACE, LEFT_ALT, ENTER, BACKSPACE, RAISE (&mo 2)
+            // --------------------------------------------------------------------------------------------
+            // |  ESC  |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |  `  |
+            // |  TAB  |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U  |  I  |  O  |  P  |  -  |
+            // |  CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J  |  K  |  L  |  ;  |  '  |
+            // | SHIFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M  |  ,  |  .  |  /  | SHIFT |
+            // --------------------------------------------------------------------------------------------
+            // |      |      |      |  L1  |  SPC  |  LALT  |  ENT  |  BSPC  |  R1  |      |      |      |
+            // (thumb row: L1=LOWER, R1=RAISE)
             bindings = <
 &kp ESC &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &kp GRAVE
 &kp TAB &kp Q &kp W &kp E &kp R &kp T &kp Y &kp U &kp I &kp O &kp P &kp MINUS
