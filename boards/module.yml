@@ -1,4 +1,0 @@
-name: corne_hw
-build:
-  cmake: .
-  kconfig: .
