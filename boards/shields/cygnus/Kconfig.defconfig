@@ -1,0 +1,6 @@
+if SHIELD_CYGNUS_LEFT || SHIELD_CYGNUS_RIGHT
+
+config ZMK_KEYBOARD_NAME
+    default "Cygnus"
+
+endif

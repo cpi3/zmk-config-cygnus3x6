@@ -1,0 +1,11 @@
+file_format: "1"
+id: cygnus
+name: Cygnus
+type: shield
+url: https://github.com/cygnus3x6/cygnus
+requires: [pro_micro]
+features:
+  - keys
+siblings:
+  - cygnus_left
+  - cygnus_right
