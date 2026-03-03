@@ -3,17 +3,14 @@
  *
  * SPDX-License-Identifier: MIT
  */
-
 #include <dt-bindings/zmk/matrix_transform.h>
 #include <physical_layouts.dtsi>
-
 / {
     chosen {
         zephyr,display = &oled;
         zmk,kscan = &kscan0;
         zmk,physical-layout = &my_custom_layout;
     };
-
     default_transform: keymap_transform_0 {
         compatible = "zmk,matrix-transform";
         columns = <16>;
@@ -26,7 +23,6 @@
                                 RC(4,3) RC(4,4) RC(4,5)     RC(4,6) RC(4,7) RC(4,8)
         >;
     };
-
     my_custom_layout: my_custom_layout {
         compatible = "zmk,physical-layout";
         display-name = "Cygnus";
@@ -36,28 +32,23 @@
             <&key_physical_attrs 100 100    0   50       0     0     0>, <&key_physical_attrs 100 100  100   37       0     0     0>, <&key_physical_attrs 100 100  200   12       0     0     0>, <&key_physical_attrs 100 100  300    0       0     0     0>, <&key_physical_attrs 100 100  400   12       0     0     0>, <&key_physical_attrs 100 100  500   25       0     0     0>,
             // Row 0 Right
             <&key_physical_attrs 100 100 1050   25       0     0     0>, <&key_physical_attrs 100 100 1150   12       0     0     0>, <&key_physical_attrs 100 100 1250    0       0     0     0>, <&key_physical_attrs 100 100 1350   12       0     0     0>, <&key_physical_attrs 100 100 1450   37       0     0     0>, <&key_physical_attrs 100 100 1550   50       0     0     0>,
-
             // Row 1 Left
             <&key_physical_attrs 100 100    0  150       0     0     0>, <&key_physical_attrs 100 100  100  137       0     0     0>, <&key_physical_attrs 100 100  200  112       0     0     0>, <&key_physical_attrs 100 100  300  100       0     0     0>, <&key_physical_attrs 100 100  400  112       0     0     0>, <&key_physical_attrs 100 100  500  125       0     0     0>,
             // Row 1 Right
             <&key_physical_attrs 100 100 1050  125       0     0     0>, <&key_physical_attrs 100 100 1150  112       0     0     0>, <&key_physical_attrs 100 100 1250  100       0     0     0>, <&key_physical_attrs 100 100 1350  112       0     0     0>, <&key_physical_attrs 100 100 1450  137       0     0     0>, <&key_physical_attrs 100 100 1550  150       0     0     0>,
-
             // Row 2 Left
             <&key_physical_attrs 100 100    0  250       0     0     0>, <&key_physical_attrs 100 100  100  237       0     0     0>, <&key_physical_attrs 100 100  200  212       0     0     0>, <&key_physical_attrs 100 100  300  200       0     0     0>, <&key_physical_attrs 100 100  400  212       0     0     0>, <&key_physical_attrs 100 100  500  225       0     0     0>,
             // Row 2 Right
             <&key_physical_attrs 100 100 1050  225       0     0     0>, <&key_physical_attrs 100 100 1150  212       0     0     0>, <&key_physical_attrs 100 100 1250  200       0     0     0>, <&key_physical_attrs 100 100 1350  212       0     0     0>, <&key_physical_attrs 100 100 1450  237       0     0     0>, <&key_physical_attrs 100 100 1550  250       0     0     0>,
-
             // Row 3 Left
             <&key_physical_attrs 100 100    0  350       0     0     0>, <&key_physical_attrs 100 100  100  337       0     0     0>, <&key_physical_attrs 100 100  200  312       0     0     0>, <&key_physical_attrs 100 100  300  300       0     0     0>, <&key_physical_attrs 100 100  400  312       0     0     0>, <&key_physical_attrs 100 100  500  325       0     0     0>,
             // Row 3 Right
             <&key_physical_attrs 100 100 1050  325       0     0     0>, <&key_physical_attrs 100 100 1150  312       0     0     0>, <&key_physical_attrs 100 100 1250  300       0     0     0>, <&key_physical_attrs 100 100 1350  312       0     0     0>, <&key_physical_attrs 100 100 1450  337       0     0     0>, <&key_physical_attrs 100 100 1550  350       0     0     0>,
-
             // Thumbs Left (Inner to Outer? No, Left to Right based on X coord: 350, 450, 575)
             <&key_physical_attrs 100 100  350  415       0     0     0>, <&key_physical_attrs 100 100  450  425       0     0     0>, <&key_physical_attrs 100 150  575  400    3000   625   475>,
             // Thumbs Right (Left to Right based on X coord: 975, 1100, 1200)
             <&key_physical_attrs 100 150  975  400 (-3000)  1025   475>, <&key_physical_attrs 100 100 1100  425       0     0     0>, <&key_physical_attrs 100 100 1200  415       0     0     0>;
     };
-
     kscan0: kscan {
         compatible = "zmk,kscan-gpio-matrix";
         wakeup-source;
@@ -70,21 +61,7 @@
             , <&pro_micro 14 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
             ;
     };
-
-    left_encoder: encoder_left {
-        compatible = "alps,ec11";
-        a-gpios = <&pro_micro 21 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-        b-gpios = <&pro_micro 16 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-        steps = <80>;
-    };
-
-    sensors: sensors {
-        compatible = "zmk,keymap-sensors";
-        sensors = <&left_encoder>;
-        triggers-per-rotation = <20>;
-    };
 };
-
 &pro_micro_i2c {
     status = "okay";
     oled: ssd1306@3c {
