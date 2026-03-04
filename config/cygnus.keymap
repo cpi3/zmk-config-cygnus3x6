@@ -38,7 +38,7 @@
             bindings = <
 &kp ESCAPE  &kp EXCL      &kp AT    &kp HASH        &kp DLLR        &kp PRCNT           &kp CARET          &kp AMPS         &kp KP_MULTIPLY  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp BSPC
 &kp LCTRL   &kp KP_MINUS  &kp PLUS  &kp KP_EQUAL    &kp LEFT_BRACE  &kp LEFT_BRACKET    &kp RIGHT_BRACKET  &kp RIGHT_BRACE  &kp TILDE        &kp BACKSLASH         &kp GRAVE              &trans
-&kp LSHFT   &trans        &kp PIPE  &kp UNDERSCORE  &trans          &trans              &trans             &trans           &trans           &trans                &trans                 &kp RIGHT_SHIFT
+&kp LSHFT   &trans        &kp PIPE  &kp UNDERSCORE  &trans          &trans              &studio_unlock     &trans           &trans           &trans                &trans                 &kp RIGHT_SHIFT
                                     &kp TAB         &trans          &kp ENTER           &kp RET            &trans           &kp RALT
             >;
         };
